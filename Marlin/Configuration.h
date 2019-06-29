@@ -28,7 +28,7 @@
 
 ***********************************************************************/
 
-#define PRINTER_NAME "TEVO Tarantula (EasyConfig)"  // Change this to whatever you wish, or leave it as it is.
+#define PRINTER_NAME "TEVO (EC20190629-2000)"  // Change this to whatever you wish, or leave it as it is.
                                                     // NOTE: Whatever you put here will have " Ready..." appended to it.
 
 /**
@@ -55,19 +55,19 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          0
-#define NOZZLE_Y          0
+#define NOZZLE_X          -3.5
+#define NOZZLE_Y          3.7
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
  */
-#define Z_HOMING_HEIGHT 5
+#define Z_HOMING_HEIGHT 3
 
 /**
  * Primary Extruder steps per mm (plugged in to E0 port on controller)
  * (How to calibrate: https://toms3d.org/2014/04/06/3d-printing-guides-calibrating-your-extruder/)
  */
-#define E0_STEPS      100 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
+#define E0_STEPS      400 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
 //#define CHANGE_E0_DIRECTION   // If your extruder is going backwards, enable this.
 
 /**
@@ -82,7 +82,7 @@
  */
 //#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
 //#define SN04          // Green sensor
-//#define INDUCTIVE_NO  // Normally open inductive sensor
+#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
 //#define SERVO_PROBE   // Endstop switch on rotating arm. Set servo angles!
 //#define NOZZLE_PROBE	// Nozzle wired up to contact metal on bed
@@ -94,8 +94,8 @@
 //#define TRIPOINT
 //#define LINEAR
 //#define BILINEAR
-//#define UBL
-#define MANUAL
+#define UBL
+//#define MANUAL
 
 /**
  * Z-Probe offset from nozzle (https://github.com/JimBrown/MarlinTarantula/wiki/How-to-determine-your-Z-Probe-offset)
@@ -103,15 +103,15 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       0
-#define SENSOR_FRONT       0
+#define SENSOR_RIGHT       50
+#define SENSOR_FRONT       16
 #define SENSOR_BEHIND      0
 
 /**
  * Number of grid points in each direction
  * Minimum 3. Maximum 15 for UBL. Maximum 7 for MANUAL
  */
-#define GRID_POINTS        3
+#define GRID_POINTS        5
 
 /**
  * Margin around perimiter of bed for probing (will not probe outside this margin)
@@ -188,8 +188,8 @@
  *       CUSTOM_USER_MENUS for PETG to appear, along with PLA and ABS, under Custom Commands.
  *       PLA and ABS will appear under both Custom Command and Prepare.
  */
-#define Hot_PLA     215
-#define Bed_PLA      75
+#define Hot_PLA     100
+#define Bed_PLA      60
 
 #define Hot_ABS 		240
 #define Bed_ABS 		100
@@ -1448,8 +1448,8 @@
 
 // @section extruder
 
-#define DISABLE_E false             // Disable the extruder when not stepping
-#define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
+#define DISABLE_E false             // For all extruders
+#define DISABLE_INACTIVE_EXTRUDER true  // Keep only the active extruder enabled
 
 // @section machine
 
