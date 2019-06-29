@@ -28,7 +28,7 @@
 
 ***********************************************************************/
 
-#define PRINTER_NAME "TEVO (EC20190629-2000)"  // Change this to whatever you wish, or leave it as it is.
+#define PRINTER_NAME "TEVO (EC20190629-2100)"  // Change this to whatever you wish, or leave it as it is.
                                                     // NOTE: Whatever you put here will have " Ready..." appended to it.
 
 /**
@@ -55,8 +55,8 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          -3.5
-#define NOZZLE_Y          3.7
+#define NOZZLE_X          -1.2
+#define NOZZLE_Y          -10
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -103,8 +103,8 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       50
-#define SENSOR_FRONT       16
+#define SENSOR_RIGHT       47
+#define SENSOR_FRONT       13
 #define SENSOR_BEHIND      0
 
 /**
