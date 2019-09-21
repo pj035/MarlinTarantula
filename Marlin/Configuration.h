@@ -28,7 +28,7 @@
 
 ***********************************************************************/
 
-#define PRINTER_NAME "TEVO (EC20190629-2100)"  // Change this to whatever you wish, or leave it as it is.
+#define PRINTER_NAME "TEVO (EC20190723-1935)"  // Change this to whatever you wish, or leave it as it is.
                                                     // NOTE: Whatever you put here will have " Ready..." appended to it.
 
 /**
@@ -55,8 +55,8 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          -1.2
-#define NOZZLE_Y          -10
+#define NOZZLE_X          -3
+#define NOZZLE_Y          -26
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -103,8 +103,8 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       47
-#define SENSOR_FRONT       13
+#define SENSOR_RIGHT       48
+#define SENSOR_FRONT       12
 #define SENSOR_BEHIND      0
 
 /**
@@ -117,6 +117,8 @@
  * Margin around perimiter of bed for probing (will not probe outside this margin)
  */
 #define BED_MARGIN         1
+
+#define CUSTOM_BED_SIZE_X_SUBTRACTOR 20 // reduce bed size by 20mm because of new x carriage
 
 /**
  * Servo probe deploy and stow angles
@@ -154,6 +156,10 @@
 /**
  * TEVO Tarantula Custom PID Settings - Stock Hotend
  */
+/* 08:00:01.011 : #define DEFAULT_Kp 29.98
+08:00:01.011 : #define DEFAULT_Ki 2.46
+08:00:01.011 : #define DEFAULT_Kd 91.50*/
+
 #define  hot_Kp 9.84
 #define  hot_Ki 0.50
 #define  hot_Kd 48.17
@@ -1510,7 +1516,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200
+#define X_BED_SIZE 200 - CUSTOM_BED_SIZE_X_SUBTRACTOR
 #if ENABLED(LARGE_BED)
   #define Y_BED_SIZE 280
 #else
