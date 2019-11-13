@@ -28,7 +28,7 @@
 
 ***********************************************************************/
 
-#define PRINTER_NAME "TEVO (EC20190921-1705)"  // Change this to whatever you wish, or leave it as it is.
+#define PRINTER_NAME "TEVO (EC20191112-1730)"  // Change this to whatever you wish, or leave it as it is.
                                                     // NOTE: Whatever you put here will have " Ready..." appended to it.
 
 /**
@@ -38,7 +38,7 @@
 #define SDSUPPORT
 //#define CHANGE_Y_DIRECTION        // If your bed homes in the wrong direction (it should move front to back) enable this.
 //#define CHANGE_X_DIRECTION        // If your X carriage homes in the wrong direction (it should move right to left) enable this.
-#define CHANGE_Z_DIRECTION        // If your Z homes in the wrong direction (it should move top to bottom) enable this.
+//#define CHANGE_Z_DIRECTION        // If your Z homes in the wrong direction (it should move top to bottom) enable this.
 //#define HOTEND_E3DV6              // Genuine E3D v6 hotend.
 //#define FULL_GRAPHIC_SMART        // Enable this if you have a RepRap Discount Full Graphic Smart Controller (The
                                     // stock controller is a RepRap Discount Smart Controller)
@@ -55,8 +55,8 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          -4 //-3
-#define NOZZLE_Y          -23 //-26
+#define NOZZLE_X          -3
+#define NOZZLE_Y          -26
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -103,9 +103,9 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       0 // 48
-#define SENSOR_FRONT       0 // 12
-#define SENSOR_BEHIND      98
+#define SENSOR_RIGHT       48
+#define SENSOR_FRONT       12
+#define SENSOR_BEHIND      0
 
 /**
  * Number of grid points in each direction
@@ -118,7 +118,7 @@
  */
 #define BED_MARGIN         1
 
-#define CUSTOM_BED_SIZE_X_SUBTRACTOR 20 // reduce bed size by 20mm because of new x carriage
+#define CUSTOM_BED_SIZE_X_SUBTRACTOR 0 // reduce bed size by 20mm because of new x carriage
 
 /**
  * Servo probe deploy and stow angles
