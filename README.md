@@ -1,3 +1,11 @@
+
+============================================================================
+
+By pj035: This is the configuration for my custom original Tevo Tarantula:
+* SKR 1.4 Turbo with TMC2209 and Hardware I2C EEPROM
+* UBL Leveling with LJ18A3-8-ZB/X
+* Aluminium X, Y, Z Brackets
+
 ============================================================================
 
 __Configured for MY Tevo Tarantula. It works for me, it may not work for you!__
