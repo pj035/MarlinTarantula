@@ -450,8 +450,9 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-// NOTE/impl: SKR 1.4 Turbo Autofan E0
-#define E0_AUTO_FAN_PIN P2_04
+// NOTE/impl: SKR 1.4 Turbo Autofan E0 - in case I migrate part cooling fan to its actual port
+//#define E0_AUTO_FAN_PIN P2_04
+#define E0_AUTO_FAN_PIN -1
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -473,7 +474,8 @@
  * The multiplexer is automatically switched at tool-change.
  * Set FANMUX[012]_PINs below for up to 2, 4, or 8 multiplexed fans.
  */
-#define FANMUX0_PIN -1
+// NOTE/impl: part cooling fan on E1 connector
+#define FANMUX0_PIN P2_04
 #define FANMUX1_PIN -1
 #define FANMUX2_PIN -1
 
