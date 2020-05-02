@@ -65,6 +65,11 @@
 #define Z_HOMING_HEIGHT 3
 
 /**
+ * Sensorless Hominc TMC2209 
+ */
+#define TMC2209_SENSORLESS_HOMING true
+
+/**
  * Primary Extruder steps per mm (plugged in to E0 port on controller)
  * (How to calibrate: https://toms3d.org/2014/04/06/3d-printing-guides-calibrating-your-extruder/)
  */
@@ -1003,8 +1008,13 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#if ENABLED(TMC2209_SENSORLESS_HOMING)
+  #define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+  #define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#else
+  #define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+  #define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#endif
 #if ENABLED(BLTOUCH)
   // #define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #elif ENABLED(INDUCTIVE_NC)
