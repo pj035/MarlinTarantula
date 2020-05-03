@@ -27,19 +27,9 @@
 //
 // EEPROM
 //
-// Hardware I2C EEPROM
-#define HARDWARE_I2C_EEPROM 1
-
-#if HARDWARE_I2C_EEPROM
-  // source https://www.makenvape.uk/3d-printing/3d-printing-guides/skr-v1-4-i2c-eeprom/
-  #define MNV_SKRV1_4_256K_END 0x7FFF //32Kb
-  //#define MNV_SKRV1_4_512K_END 0xFFFF //64Kb
-  #define I2C_EEPROM
-  #define E2END MNV_SKRV1_4_256K_END
-#else
-  #define FLASH_EEPROM_EMULATION
-  //#define SDCARD_EEPROM_EMULATION
-#endif
+// source https://www.makenvape.uk/3d-printing/3d-printing-guides/skr-v1-4-i2c-eeprom/
+// #define I2C_EEPROM
+// #define E2END 0x7FFF // 32Kb; 0xFFFF //64Kb
 
 //
 // Include SKR 1.4 pins

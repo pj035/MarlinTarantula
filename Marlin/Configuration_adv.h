@@ -474,8 +474,7 @@
  * The multiplexer is automatically switched at tool-change.
  * Set FANMUX[012]_PINs below for up to 2, 4, or 8 multiplexed fans.
  */
-// NOTE/impl: part cooling fan on E1 connector
-#define FANMUX0_PIN P2_04
+#define FANMUX0_PIN -1
 #define FANMUX1_PIN -1
 #define FANMUX2_PIN -1
 
